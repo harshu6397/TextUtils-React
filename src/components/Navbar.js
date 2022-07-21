@@ -12,12 +12,12 @@ export default function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>
-              </li>
+              </li> */}
             </ul>
             <div className={`form-check form-switch form-check-reverse text-${props.mode === 'dark'?'white':'dark'}`}>
               <input className="form-check-input" onClick={props.toggleMode} type="checkbox" id="flexSwitchCheckReverse"/>
