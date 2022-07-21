@@ -8,49 +8,49 @@ export default function TextForm(props) {
 
     const handleUppercase = () => {
         setText(text.toUpperCase())
-        if(text !== '') {
+        if(text.trim() !== '') {
             props.showAlert("Converted to UPPERCASE!", "Success")
         }
     }
 
     const handleLowerCase = () => {
         setText(text.toLowerCase())
-        if(text !== '') {
+        if(text.trim() !== '') {
         props.showAlert("Converted to lowercase!", "Success")
         }
     }
 
     const handlePunctution = () => {
         setText(text.replace(/[.,-/#!$%&;:{}=\-_`~()"']/g, ' '))
-        if(text !== '') {
+        if(text.trim() !== '') {
         props.showAlert("Punctutions removed!", "Success")
         }
     }
 
     const handleNewLines = () => {
         setText(text.replace(/\n/g, ' '))
-        if(text !== '') {
+        if(text.trim() !== '') {
         props.showAlert("NewLines removed!", "Success")
         }
     }
 
     const handleSpaces = () => {
         setText(text.replace(/\s+/g, ' '))
-        if(text !== '') {
+        if(text.trim() !== '') {
         props.showAlert("Extra spaces removed!", "Success")
         }
     }
     
     const handleCopyText = () => {
         navigator.clipboard.writeText(text)
-        if(text !== '') {
+        if(text.trim() !== '') {
         props.showAlert("Copied to Clipboard!", "Success")
         }
     }
 
     const handleClearText = () => {
         setText("");
-        if(text !== ''){
+        if(text.trim() !== ''){
         props.showAlert("Cleared!", "Success")
         }
     }
