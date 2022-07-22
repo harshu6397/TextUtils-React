@@ -73,11 +73,11 @@ export default function TextForm(props) {
         </div>
         <div className={`container my-3 text-${props.mode === 'dark'?'white':'dark'}`}>
             <h1>Text Summary is :</h1>
-            <p>The number of words are {text === '' ? text.split("").length : text.trim().split(" ").length} and the number of characters are {text.trim().length}</p>
+            <p>The number of words are {text.replace(/\s+/g, '') === ''? text.replace(/\s+/g, '').length : text.replace(/\s+/g, ' ').trim().split(" ").length} and the number of characters are {text.trim().length}</p>
         </div>
         </>
     )
-}
+} 
 
 TextForm.prototype = {
     heading: PropTypes.string.isRequired
